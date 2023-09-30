@@ -18,6 +18,7 @@ class FunctionArrayTest {
         int [] expected = {5, 4, 3, 2, 1};
         assertArrayEquals(expected,result);
     }
+
     @Test
     public void testFirstSum(){
         int result = FunctionArray.sumOfNumbers(new int[]{1,2,3,4});
@@ -74,9 +75,17 @@ class FunctionArrayTest {
     public void testCocatinatingInBetween(){
         String [] array = {"1","2","3","4"};
         String [] array2 = {"a","b","c","d"};
-        String [] result = FunctionArray.numbers(array,array2);
+        String [] result = FunctionArray.cocatinatingInBetween(array,array2);
         String [] expected = {"1","a","2","b","3","c","4","d"};
         assertArrayEquals(expected,result);
+    }
+    @Test
+    public void testNumbersToArray(){
+        String numbers = ("2345");
+        int [] result = FunctionArray.digitToList(numbers);
+        int [] expected = {2,3,4,5};
+        assertArrayEquals(expected,result);
+
 
     }
 }
